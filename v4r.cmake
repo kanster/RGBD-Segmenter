@@ -1,0 +1,11 @@
+IF ( "x${V4R_DIR}x" STREQUAL "xx"  )
+  SET( V4R_DIR "$ENV{V4R_DIR}" )
+    MESSAGE( STATUS "V4R_DIR is ${V4R_DIR}")
+  IF (NOT EXISTS ${V4R_DIR}  )
+    MESSAGE( FATAL_ERROR "Set V4R_DIR in your .profile file with export V4R_DIR=\"$HOME/projects/acin\"")
+  ENDIF(NOT EXISTS ${V4R_DIR}  )
+ELSE ("x${V4R_DIR}x" STREQUAL "xx" )
+  MESSAGE( FATAL_ERROR "Set V4R_DIR in your .profile file with export V4R_DIR=\"$HOME/projects/acin\"")
+ENDIF("x${V4R_DIR}x" STREQUAL "xx" )
+
+add_definitions(-DV4R_DIR="${V4R_DIR}")
