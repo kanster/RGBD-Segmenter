@@ -243,8 +243,11 @@ printf("StructuralRelationsLight::computeRelations start!\n");
 //     }
   } // end parallel sections
 
-  
-  surface::Relation relations[view->surfaces.size()][view->surfaces.size()];
+
+  std::vector< std::vector<surface::Relation> > relations(view->surfaces.size());
+  for ( int i = 0; i < relations.size(); ++ i )
+    relations[i].resize( view->surfaces.size() );
+//  surface::Relation relations[view->surfaces.size()][view->surfaces.size()];
   surface::Relation rel;
   rel.valid = false;
   for(unsigned i=0; i<view->surfaces.size(); i++)

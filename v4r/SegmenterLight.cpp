@@ -244,6 +244,7 @@ namespace segment
     contourDet.setView(&view);
     contourDet.computeContours();
     
+
     // relations
     surface::StructuralRelationsLight stRel;
     stRel.setInputCloud(pcl_cloud);
