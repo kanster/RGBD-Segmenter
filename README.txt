@@ -1,5 +1,8 @@
 ### SegmenterLight 0.1 (Bug fixed by Kanzhi Wu)
 -------------------
+array initialisation is only limited to certain size of memory, while vector is not.
+
+-------------------
 This software package contains software to segment data from RGBD-sensors, such as Microsoft Kinect or Asus Xtion. 
 
 
